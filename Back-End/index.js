@@ -14,7 +14,16 @@ app.listen(PORT, () => {
 
 //create new book
 app.post('/books', async (request, response) => {
-    try {
+    try { if {
+        !request.body.title ||
+        !request.body.author ||
+        !request.body.publishYear
+    } {
+        return response.status(400).send({
+            message: 'Send all required fields: title, author, publishYear'
+        })
+    }
+
     } catch (error) {
         console.log(error.message);
         response.status(500).send({message: error.message});
@@ -29,9 +38,9 @@ app.post('/books', async (request, response) => {
     };
 
     const book = await book.create(newBook);
-
+});
     //fetch books from db
-    app.get('/books', async (request, response) => 
+    app.get('/books', async (request, response) => {
     try {
         const books = await Book.find({});
 
@@ -44,7 +53,6 @@ app.post('/books', async (request, response) => {
         console.log(error.message);
         response.status(500).send({message: error.message});
     }
-    )
 });
     //fetch single book
     app.get('/books/:id', async (request, response) => {
@@ -101,7 +109,6 @@ app.post('/books', async (request, response) => {
                         message: 'Send all required fields: title, author, publishYear',
                     });
                    }
-                    
                 if (!result) {
                     return response.status(404).json({ message: 'Book not found' });
                 }
