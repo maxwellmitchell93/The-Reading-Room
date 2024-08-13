@@ -6,16 +6,16 @@ import booksRoute from './routes/bookRoute.js';
 const app = express();
 
 //Middleware for parsing request body
-app.use(express.json());
+// app.use(express.json());
 
-//middleware for handling cors
-app.use(
-    cors({
-        origin: 'http://localhost:3000',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-);
+// //middleware for handling cors
+// app.use(
+//     cors({
+//         origin: 'http://localhost:3000',
+//         methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//         allowedHeaders: ['Content-Type'],
+//     })
+// );
 
 
 // initial http request
