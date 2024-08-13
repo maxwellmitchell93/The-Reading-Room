@@ -1,0 +1,31 @@
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    overflow: hidden; /* Ensure that content outside the container is not clipped */
+    width: 70%;
+  }
+  
+  .spinner-slide {
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+    width: 120%; 
+  }
+  
+  .book-cover {
+    width: 30%; 
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .spinner-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
