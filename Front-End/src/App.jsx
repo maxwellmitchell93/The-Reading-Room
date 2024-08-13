@@ -1,8 +1,26 @@
+import React from "react";
+import {Routes, route} from 'react-router-dom'
+import Home from './pages/Home';
+import CreateBook from './pages/CreateBook';
+import ShowBook from './pages/ShowBook';
+import EditBook from './pages/EditBook';
+improt DeleteBook from './pages/DeleteBook';
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import Spinner from './assets/components/home/Spinner'; 
+
+const App = () => {
+  <Routes>
+    <Route path="/" elemment={<Home />} />
+    <Route path="/books/create" element={<CreateBook />} />
+    <Route path="/books/details/:id" element={<ShowBook />} />
+    <Route path="/books/edit.:id" element={<EditBook />} />
+    <Route path="/books/delete/:id" element={<DeleteBook />} />
+  </Routes>;
+};
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +46,6 @@ function App() {
       <Spinner />
     </>
   );
-}
+};
 
 export default App;
