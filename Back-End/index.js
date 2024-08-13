@@ -8,6 +8,16 @@ const app = express();
 //Middleware for parsing request body
 app.use(express.json());
 
+//middleware for handling cors
+app.use(
+    cors({
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders: ['Content-Type'],
+    })
+);
+
+
 // initial http request
 app.get('/', (request, response) => {
     console.log(request);
