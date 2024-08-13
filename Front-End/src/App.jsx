@@ -29,6 +29,6 @@ function App() {
       </Router>
     </CartProvider>
   );
-}
+};
 
 export default App;
