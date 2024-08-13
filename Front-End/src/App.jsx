@@ -11,17 +11,19 @@ function App() {
     <>
       <div className="flex justify-center items-center space-x-4">
         <a href="https://vitejs.dev" target="_blank" className="p-4">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
         </a>
         <a href="https://react.dev" target="_blank" className="p-4">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
         </a>
       </div>
-      <h1 className="text-4xl font-bold text-center mt-8">Vite + React</h1>
+      <h1 className="text-4xl font-bold text-center mt-8">The Reading Room</h1>
+      
       <div className="card p-8 bg-gray-100 rounded-lg shadow-md">
+      <h3 className="text-4xl font-thin text-right mt-8">Fiction Nonfiction Genres</h3>
       </div>
       <p className="read-the-docs text-center mt-8">
-        Click on the Vite and React logos to learn more
+        Top 10 books of 2024
       </p>
       
       <Spinner />
