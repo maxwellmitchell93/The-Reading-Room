@@ -1,0 +1,49 @@
+.book-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .book-details-cover {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .book-details-info {
+    max-width: 500px;
+  }
+  
+  .book-details-info h1 {
+    margin-bottom: 20px;
+  }
+  
+  .book-details-price {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .add-to-cart-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #45a049;
+  }
+  
+  .purchase-link {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+  .purchase-link:hover {
+    text-decoration: underline;
+  }
+  

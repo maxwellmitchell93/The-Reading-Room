@@ -1,31 +1,33 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Header from './assets/components/Header';
+import Spinner from './assets/components/home/Spinner';
+import BookDetails from './pages/BookDetails';
+import MyCart from './pages/MyCart';
+import { CartProvider } from './context/CartContext';
 import './App.css';
-import Spinner from './assets/components/home/Spinner'; 
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div className="flex justify-center items-center space-x-4">
-        <a href="https://vitejs.dev" target="_blank" className="p-4">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" className="p-4">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-4xl font-bold text-center mt-8">Vite + React</h1>
-      <div className="card p-8 bg-gray-100 rounded-lg shadow-md">
-      </div>
-      <p className="read-the-docs text-center mt-8">
-        Click on the Vite and React logos to learn more
-      </p>
-      
-      <Spinner />
-    </>
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Header />  {/* Include the Header component */}
+
+          {/* Cart Button */}
+          <Link to="/cart" className="cart-button">
+            My Cart
+          </Link>
+
+          {/* Main Content */}
+          <Routes>
+            <Route path="/" element={<Spinner />} />
+            <Route path="/book/:id" element={<BookDetails />} />
+            <Route path="/cart" element={<MyCart />} />
+          </Routes>
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 
