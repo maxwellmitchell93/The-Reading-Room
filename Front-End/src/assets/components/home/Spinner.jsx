@@ -17,7 +17,9 @@ const Spinner = () => {
       const data = await response.json();
       const fetchedBooks = data.items?.map((item) => ({
         title: item.volumeInfo?.title || "Untitled",
-        cover: item.volumeInfo?.imageLinks?.thumbnail || 'placeholder.jpg',
+        cover: item.volumeInfo?.imageLinks?.large || 
+               item.volumeInfo?.imageLinks?.medium || 
+               item.volumeInfo?.imageLinks?.thumbnail || 'placeholder.jpg',
       }));
       setBooks(fetchedBooks || []);
     } catch (error) {
