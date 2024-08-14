@@ -8,7 +8,7 @@ improt DeleteBook from './pages/DeleteBook';
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import './App.css';
+import './Apps.css';
 import Spinner from './assets/components/home/Spinner'; 
 
 const App = () => {
