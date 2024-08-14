@@ -1,0 +1,141 @@
+/* src/pages/MyCart.css */
+
+.cart-page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .cart-items-section {
+    width: 65%;
+  }
+  
+  .cart-totals-section {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .cart-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .cart-items-table th, .cart-items-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .cart-items-table th {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .quantity-input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .remove-item-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .remove-item-button:hover {
+    color: #333;
+  }
+  
+  .coupon-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .coupon-input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .apply-coupon-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-coupon-button:hover {
+    background-color: #555;
+  }
+  
+  .cart-totals-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cart-totals-table td {
+    padding: 10px;
+  }
+  
+  .cart-totals-table td:first-child {
+    font-weight: 600;
+  }
+  
+  .shipping-options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .calculate-shipping-button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .calculate-shipping-button:hover {
+    background-color: #555;
+  }
+  
+  .checkout-button {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .checkout-button:hover {
+    background-color: #555;
+  }
+  
